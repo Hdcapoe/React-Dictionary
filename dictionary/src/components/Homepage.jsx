@@ -38,6 +38,10 @@ const Homepage = () => {
 		setWord(e.target.value);
 	};
 
+	const handleSearch = () => {
+		getDictionaryData();
+	};
+
 	return;
 };
 
