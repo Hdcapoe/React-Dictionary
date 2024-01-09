@@ -3,5 +3,9 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background: url('https://www.shutterstock.com/image-photo/english-dictionary-letters-flying-out-260nw-745916761.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff; /* Adjust text color for better readability on the background */
 }
-
