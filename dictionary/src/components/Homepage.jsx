@@ -42,7 +42,20 @@ const Homepage = () => {
 		getDictionaryData();
 	};
 
-	return;
+	return (
+		<div>
+			<div>
+				<label htmlFor='wordInput'>Enter a word: </label>
+				<input
+					type='text'
+					id='wordInput'
+					value={word}
+					onChange={handleInputChange}
+				/>
+				<button onClick={handleSearch}>Search</button>
+			</div>
+		</div>
+	);
 };
 
 export default Homepage;
