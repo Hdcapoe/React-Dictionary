@@ -1,78 +1,74 @@
 body {
-  margin: 0;
-  padding: 0;
-  background-image: url('https://www.shutterstock.com/image-photo/english-dictionary-letters-flying-out-260nw-745916761.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://www.shutterstock.com/image-photo/english-dictionary-letters-flying-out-260nw-745916761.jpg') center/cover no-repeat;
-  color: white;
+	margin: 0;
+	padding: 0;
+	background-image: url('https://www.shutterstock.com/image-photo/english-dictionary-letters-flying-out-260nw-745916761.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+		url('https://www.shutterstock.com/image-photo/english-dictionary-letters-flying-out-260nw-745916761.jpg')
+			center/cover no-repeat;
+	color: white;
 }
 
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-  font-family: 'Helvetica', sans-serif;
-  font-size: 18px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 2rem;
+	text-align: center;
+	font-family: 'Helvetica', sans-serif;
+	font-size: 18px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 button {
-  background: linear-gradient(to bottom, #4CAF50, #45a049); 
-  color: white;
+	background: linear-gradient(to bottom, #4caf50, #45a049);
+	color: white;
 }
 
 button:hover {
-  background-color: #4CAF80; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-  transform: scale(1.1); 
-  filter: drop-shadow(0 0 0.5em #646cff);
+	background-color: #4caf80;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	transform: scale(1.1);
+	filter: drop-shadow(0 0 0.5em #646cff);
 }
 
 .inside:hover {
-  color: #46a0f5;
-  text-decoration: underline;
+	color: #46a0f5;
+	text-decoration: underline;
 }
 
-
 input:hover {
-  border-bottom: 2px solid #46a0f5;
+	border-bottom: 2px solid #46a0f5;
 }
 
 header:hover {
-  background-color: #333; 
-  border-bottom: 2px solid #46a0f5; 
+	background-color: #333;
+	border-bottom: 2px solid #46a0f5;
 }
-
 
 .define {
-   background-color: #333; 
-   padding: 1.5em;
-   border-radius: 8px; 
-   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-  transition: transform 0.3s ease-in-out;
+	background-color: #333;
+	padding: 1.5em;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease-in-out;
 }
-
 
 .define:hover {
-  transform: rotate(3deg)
+	transform: rotate(3deg);
 }
 
-
 .define p {
-   font-size: 18px; 
-   line-height: 1.5;
-   color: white; 
+	font-size: 18px;
+	line-height: 1.5;
+	color: white;
 }
 
-
 .define p {
-   transition: color 0.3s ease-in-out;
+	transition: color 0.3s ease-in-out;
 }
 
 .define:hover p {
-   color: #46a0f5;
+	color: #46a0f5;
 }
-
