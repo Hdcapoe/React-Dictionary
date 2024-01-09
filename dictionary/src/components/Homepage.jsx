@@ -1,74 +1,81 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Homepage = () => {
-	const [word, setWord] = useState('');
-	const [definition, setDefinition] = useState([]);
-	const [searchedWord, setSearchedWord] = useState('');
+  const [word, setWord] = useState('');
+  const [definition, setDefinition] = useState([]);
+  const [searchedWord, setSearchedWord] = useState('');
 
-	const apiUrl =
-		'https://dictionary-by-api-ninjas.p.rapidapi.com/v1/dictionary';
+  const apiUrl =
+    'https://dictionary-by-api-ninjas.p.rapidapi.com/v1/dictionary';
 
-	const options = {
-		method: 'GET',
-		headers: {
-			'X-RapidAPI-Key': '393d3bf389msh22ad968edc3f86ep10bee4jsncc2d901b34cf',
-			'X-RapidAPI-Host': 'dictionary-by-api-ninjas.p.rapidapi.com',
-		},
-	};
+  const options = {
+    method: 'GET',
+    headers: {
+      'X-RapidAPI-Key': '393d3bf389msh22ad968edc3f86ep10bee4jsncc2d901b34cf',
+      'X-RapidAPI-Host': 'dictionary-by-api-ninjas.p.rapidapi.com',
+    },
+  };
 
-	async function getDictionaryData() {
-		try {
-			const response = await fetch(`${apiUrl}?word=${word}`, options);
+  useEffect(() => {
+    // Use useEffect to make the API call when the component mounts
+    getDictionaryData();
+  }, []);
 
-			if (!response.ok) {
-				throw new Error(`HTTP error! Status: ${response.status}`);
-			}
+  async function getDictionaryData() {
+    try {
+      const response = await fetch(`${apiUrl}?word=${word}`, options);
 
-			const data = await response.json();
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
 
-			console.log('API Response:', data);
+      const data = await response.json();
 
-			setDefinition(data.definition || '');
+      console.log('API Response:', data);
 
-			setSearchedWord(word);
-		} catch (error) {
-			console.error('Error:', error.message);
-		}
-	}
+      setDefinition(data.definition || '');
 
-	const handleInputChange = (e) => {
-		setWord(e.target.value);
-	};
+      setSearchedWord(word);
+    } catch (error) {
+      console.error('Error:', error.message);
+    }
+  }
 
-	const handleSearch = () => {
-		getDictionaryData();
-	};
+  const handleInputChange = (e) => {
+    setWord(e.target.value);
+  };
 
-	return (
-		<div>
-			<div className='inside'>
-				<label htmlFor='wordInput'>Enter a word: </label>
-				<input
-					type='text'
-					id='wordInput'
-					value={word}
-					onChange={handleInputChange}
-				/>
-				<button onClick={handleSearch}>Search</button>
-			</div>
-			<div>
-				{searchedWord && <h2>Definition for "{searchedWord}":</h2>}
-				{definition ? (
-					<div className='define'>
-						<h3>Definition:</h3>
-						<p>{definition}</p>
-					</div>
-				) : (
-					<p>No definition found.</p>
-				)}
-			</div>
-		</div>
-	);
+  const handleSearch = () => {
+    if (word !== '') {
+      getDictionaryData();
+    }
+  };
+
+  return (
+    <div>
+      <div className='inside'>
+        <label htmlFor='wordInput'>Enter a word: </label>
+        <input
+          type='text'
+          id='wordInput'
+          value={word}
+          onChange={handleInputChange}
+        />
+        <button onClick={handleSearch}>Search</button>
+      </div>
+      <div>
+        {searchedWord && <h2>Definition for "{searchedWord}":</h2>}
+        {definition ? (
+          <div className='define'>
+            <h3>Definition:</h3>
+            <p>{definition}</p>
+          </div>
+        ) : (
+          <p>No definition found.</p>
+        )}
+      </div>
+    </div>
+  );
 };
 
 export default Homepage;
