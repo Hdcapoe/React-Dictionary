@@ -52,5 +52,27 @@ header:hover {
    padding: 1.5em;
    border-radius: 8px; 
    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.3s ease-in-out;
+}
+
+
+.define:hover {
+  transform: rotate(3deg)
+}
+
+
+.define p {
+   font-size: 18px; 
+   line-height: 1.5;
+   color: white; 
+}
+
+
+.define p {
+   transition: color 0.3s ease-in-out;
+}
+
+.define:hover p {
+   color: #46a0f5;
 }
 
