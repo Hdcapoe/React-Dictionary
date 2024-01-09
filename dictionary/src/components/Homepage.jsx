@@ -1,9 +1,12 @@
 const Homepage = () => {
+	const [word, setWord] = useState('');
+	const [definition, setDefinition] = useState([]);
+	const [searchedWord, setSearchedWord] = useState('');
 
+	const apiUrl =
+		'https://dictionary-by-api-ninjas.p.rapidapi.com/v1/dictionary';
 
-const apiUrl = 'https://dictionary-by-api-ninjas.p.rapidapi.com/v1/dictionary';
-  
-  return 
-}
+	return;
+};
 
-export default Homepage
+export default Homepage;
