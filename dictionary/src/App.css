@@ -19,4 +19,8 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
+button {
+  background: linear-gradient(to bottom, #4CAF50, #45a049); /* Adjust gradient colors */
+  color: white;
+}
 
