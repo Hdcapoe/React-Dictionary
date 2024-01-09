@@ -34,6 +34,10 @@ const Homepage = () => {
 		}
 	}
 
+	const handleInputChange = (e) => {
+		setWord(e.target.value);
+	};
+
 	return;
 };
 
