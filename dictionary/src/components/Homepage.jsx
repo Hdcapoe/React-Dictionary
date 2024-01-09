@@ -3,6 +3,10 @@ const Homepage = () => {
 	const [definition, setDefinition] = useState([]);
 	const [searchedWord, setSearchedWord] = useState('');
 
+	
+	const apiUrl =
+		'https://dictionary-by-api-ninjas.p.rapidapi.com/v1/dictionary';
+	
 	const options = {
 		method: 'GET',
 		headers: {
@@ -11,8 +15,12 @@ const Homepage = () => {
 		},
 	};
 
-	const apiUrl =
-		'https://dictionary-by-api-ninjas.p.rapidapi.com/v1/dictionary';
+	
+	
+	 async function getDictionaryData() {
+    
+  }
+	
 
 	return;
 };
