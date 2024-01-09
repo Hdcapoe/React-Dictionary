@@ -35,3 +35,8 @@ button:hover {
   color: #46a0f5;
   text-decoration: underline;
 }
+
+
+input:hover {
+  border-bottom: 2px solid #46a0f5;
+}
