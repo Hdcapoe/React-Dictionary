@@ -54,6 +54,17 @@ const Homepage = () => {
 				/>
 				<button onClick={handleSearch}>Search</button>
 			</div>
+			<div>
+				{searchedWord && <h2>Definition for "{searchedWord}":</h2>}
+				{definition ? (
+					<div>
+						<h3>Definition:</h3>
+						<p>{definition}</p>
+					</div>
+				) : (
+					<p>No definition found.</p>
+				)}
+			</div>
 		</div>
 	);
 };
