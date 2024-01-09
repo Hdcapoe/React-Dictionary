@@ -60,7 +60,7 @@ const Homepage = () => {
 			<div>
 				{searchedWord && <h2>Definition for "{searchedWord}":</h2>}
 				{definition ? (
-					<div>
+					<div className='define'>
 						<h3>Definition:</h3>
 						<p>{definition}</p>
 					</div>
