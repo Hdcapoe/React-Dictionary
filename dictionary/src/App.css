@@ -14,13 +14,21 @@ body {
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  font-family: 'Helvetica', sans-serif; /* Adjust to your preferred font family */
+  font-family: 'Helvetica', sans-serif;
   font-size: 18px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 button {
-  background: linear-gradient(to bottom, #4CAF50, #45a049); /* Adjust gradient colors */
+  background: linear-gradient(to bottom, #4CAF50, #45a049); 
   color: white;
 }
+
+button:hover {
+  background-color: #4CAF80; /* Adjust hover background color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adjust hover box shadow */
+  transform: scale(1.1); /* Adjust hover scale */
+  filter: drop-shadow(0 0 0.5em #646cff);
+}
+
 
