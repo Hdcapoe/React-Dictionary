@@ -1,3 +1,6 @@
+import React, { useState } from 'react';
+
+
 const Homepage = () => {
 	const [word, setWord] = useState('');
 	const [definition, setDefinition] = useState([]);
