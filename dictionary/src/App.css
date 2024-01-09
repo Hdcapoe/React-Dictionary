@@ -25,10 +25,13 @@ button {
 }
 
 button:hover {
-  background-color: #4CAF80; /* Adjust hover background color */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adjust hover box shadow */
-  transform: scale(1.1); /* Adjust hover scale */
+  background-color: #4CAF80; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  transform: scale(1.1); 
   filter: drop-shadow(0 0 0.5em #646cff);
 }
 
-
+.inside:hover {
+  color: #46a0f5;
+  text-decoration: underline;
+}

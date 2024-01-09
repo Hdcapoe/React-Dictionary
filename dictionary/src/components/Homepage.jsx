@@ -47,7 +47,7 @@ const Homepage = () => {
 
 	return (
 		<div>
-			<div>
+			<div className='inside'>
 				<label htmlFor='wordInput'>Enter a word: </label>
 				<input
 					type='text'
