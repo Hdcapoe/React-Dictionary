@@ -3,10 +3,9 @@ const Homepage = () => {
 	const [definition, setDefinition] = useState([]);
 	const [searchedWord, setSearchedWord] = useState('');
 
-	
 	const apiUrl =
 		'https://dictionary-by-api-ninjas.p.rapidapi.com/v1/dictionary';
-	
+
 	const options = {
 		method: 'GET',
 		headers: {
@@ -15,12 +14,25 @@ const Homepage = () => {
 		},
 	};
 
-	
-	
-	 async function getDictionaryData() {
-    
-  }
-	
+	async function getDictionaryData() {
+		try {
+			const response = await fetch(`${apiUrl}?word=${word}`, options);
+
+			if (!response.ok) {
+				throw new Error(`HTTP error! Status: ${response.status}`);
+			}
+
+			const data = await response.json();
+
+			console.log('API Response:', data);
+
+			setDefinition(data.definition || '');
+
+			setSearchedWord(word);
+		} catch (error) {
+			console.error('Error:', error.message);
+		}
+	}
 
 	return;
 };
