@@ -5,7 +5,8 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color: #fff; /* Adjust text color for better readability on the background */
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://www.shutterstock.com/image-photo/english-dictionary-letters-flying-out-260nw-745916761.jpg') center/cover no-repeat;
+  color: white;
 }
 
 #root {
@@ -13,4 +14,9 @@ body {
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  font-family: 'Helvetica', sans-serif; /* Adjust to your preferred font family */
+  font-size: 18px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+
+
